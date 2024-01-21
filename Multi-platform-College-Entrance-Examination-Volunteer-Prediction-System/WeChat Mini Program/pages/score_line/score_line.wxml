@@ -1,0 +1,67 @@
+<!--pages/score_line/score_line.wxml-->
+
+<view class="title">
+  分数线查询
+</view>
+
+<view class="section">
+  <view class="section__title">选择生源地：</view>
+  <picker bindchange="bindPickerChange_location" value="{{index_for_location}}" range="{{array_location}}">
+    <view class="picker">
+      当前选择：{{array_location[index_for_location]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择考生类别：</view>
+  <picker bindchange="bindPickerChange_class" value="{{index_for_class}}" range="{{array_class}}">
+    <view class="picker">
+      当前选择：{{array_class[index_for_class]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择年份：</view>
+  <picker bindchange="bindPickerChange_year" value="{{index_for_year}}" range="{{array_year}}">
+    <view class="picker">
+      当前选择：{{array_year[index_for_year]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view>
+  请输入校名：
+</view>
+<input class="picker" placeholder="示例：华南理工大学" bindinput="add_school"/>
+</view>
+
+<button class="btn" type="text" bindtap="search_score">查询分数线</button>
+
+<view class="empty">
+  
+</view>
+
+<view wx:for = "{{output_list}}">
+  <view class = "itemRoot" bindtap="jump1" data-school="{{item.school_name}}" data-major="{{item.major}}" data-location="{{array_location[index_for_location]}}" data-class="{{array_class[index_for_class]}}">
+    <view class="output_item_top">
+      院校名：{{item.school_name}}
+    </view>
+    <view class="output_item_middle">
+      专业名称：{{item.major}}
+    </view>
+    <view class="output_item_middle">
+      专业分数线：{{item.lowest_score}}
+    </view>
+    <view class="output_item_buttom">
+      最低名次：{{item.lowest_ranking}}
+    </view>
+  </view>
+</view>
+
+<view style="height: 40px;">
+  
+</view>
+

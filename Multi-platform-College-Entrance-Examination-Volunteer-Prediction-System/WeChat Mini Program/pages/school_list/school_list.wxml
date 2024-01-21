@@ -1,0 +1,76 @@
+<!--pages/school_list/school_list.wxml-->
+
+<!-- <swiper class="swiper-container" indicator-dots indicator-color="white" indicator-active-color="black" autoplay="500" circular="true">
+  <swiper-item>
+    <view class="item1">
+      1
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view class="item2">
+      2
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view class="item3">
+      3
+    </view>
+  </swiper-item>
+
+</swiper> -->
+
+<view class="title">
+  各类高校展示
+</view>
+
+<view class="section">
+  <view class="section__title">选择院校类型：</view>
+  <picker bindchange="bindPickerChange_school" value="{{index_for_school}}" range="{{array_school}}">
+    <view class="picker">
+      当前选择：{{array_school[index_for_school]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择级别类型：</view>
+  <picker bindchange="bindPickerChange_class" value="{{index_for_class}}" range="{{array_class}}">
+    <view class="picker">
+      当前选择：{{array_class[index_for_class]}}
+    </view>
+  </picker>
+</view>
+
+<button class="btn" bindtap="search_school_list">展示高校列表</button>
+
+<view class = "empty"></view>
+
+<view wx:for = "{{output_list}}">
+  <view class = "itemRoot" bindtap="jump" data-school="{{item.school_name}}">
+    <view class="output_item_top">
+      校名：{{item.school_name}}
+    </view>
+    <view class="output_item_middle">
+      办学地点：{{item.province}}
+    </view>
+    <view class="output_item_buttom">
+      学校类别：{{item.class}}
+    </view>
+  </view>
+</view>
+
+<view class="empty"></view>
+
+<view class="section" hidden="{{hidden_for_school_list}}">
+  <view>
+  找不到想找的学校？试试输入学校名：
+  </view>
+  <input class="picker" type="text" placeholder="请输入查询的学校名" bindinput="add_school"/>
+  <button class="btn" bindtap="get_school_info_from_school_name">查询学校信息</button>
+</view>
+
+<view class="empty"></view>
+<view class="empty"></view>
+

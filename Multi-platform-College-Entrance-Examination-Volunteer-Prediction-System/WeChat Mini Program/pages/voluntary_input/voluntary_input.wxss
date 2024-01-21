@@ -1,0 +1,32 @@
+/* pages/voluntary_input/voluntary_input.wxss */
+.picker{
+  padding: 13px;
+  background-color: #ffffff;
+}
+
+.empty{
+  height: 50px;
+}
+
+.title{
+  text-align: center;
+  margin-top: 25px;
+  font-size: 25px;
+}
+
+.picker{
+  background-color:white;
+  border: 1px;
+  border-color: aquamarine;
+  border-radius: 20px;
+}
+
+.btn{
+  margin-top: 25px;
+}
+
+.section{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+}

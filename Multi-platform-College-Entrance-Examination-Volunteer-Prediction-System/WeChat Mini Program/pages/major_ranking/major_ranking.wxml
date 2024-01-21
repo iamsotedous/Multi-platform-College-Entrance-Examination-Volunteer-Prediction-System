@@ -1,0 +1,82 @@
+<!--pages/major_ranking/major_ranking.wxml-->
+
+<view class="title">
+  高校专业排名展示
+</view>
+
+<view class="section">
+  <view>
+    请输入需要查询的院校名：
+  </view>
+  <input class="picker" placeholder="示例：西北工业大学" bindinput="add_school_name"/>
+</view>
+
+
+<button class="btn" bindtap="search_by_school_name">查询学校所有的专业排名</button>
+
+<view wx:for = "{{output_list1}}">
+  <view class = "itemRoot" bindtap="jump_detail_major_ranking" data-detail="{{item.school_name}}" data-major="{{item.major}}">
+    <view class="output_item_top">
+      院校名：{{item.school_name}}
+    </view>
+    <view class="output_item_middle">
+      专业名：{{item.major}}
+    </view>
+    <view class="output_item_buttom">
+      专业类别：{{item.major_class}}
+    </view>
+    <!-- <view>
+      专业排名：{{item.ruanke_ranking}}
+    </view>
+    <view>
+      专业排名前百分比：{{item.percentage_ranking}}
+    </view>
+    <view>
+      学科评估等级：{{item.evaluation_level}}
+    </view>
+    <view>
+      是否为双一流专业：{{item.is_distinction}}
+    </view> -->
+
+  </view>
+
+</view>
+
+<!-- <view class="section">
+  <view class="section__title">选择热门专业大类：</view>
+  <picker bindchange="bindPickerChange_class" value="{{index_for_class}}" range="{{array_class}}">
+    <view class="picker">
+      当前选择：{{array_class[index_for_class]}}
+    </view>
+  </picker>
+</view>
+
+<button bindtap="search_by_class">查询该专业大类中所有专业及对应学校的排名</button>
+
+<view wx:for = "{{output_list2}}">
+  <view class = "itemRoot" >
+    <view>
+      院校名：{{item.school_name}}
+    </view>
+    <view>
+      专业名：{{item.major}}
+    </view>
+    <view>
+      专业类别：{{item.major_class}}
+    </view>
+    <view>
+      专业排名：{{item.ruanke_ranking}}
+    </view>
+    <view>
+      专业排名前百分比：{{item.percentage_ranking}}
+    </view>
+    <view>
+      学科评估等级：{{item.evaluation_level}}
+    </view>
+    <view>
+      是否为双一流专业：{{item.is_distinction}}
+    </view>
+
+  </view>
+
+</view> -->

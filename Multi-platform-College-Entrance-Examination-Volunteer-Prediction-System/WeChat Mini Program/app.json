@@ -1,0 +1,70 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/test/test",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/logon/logon",
+    "pages/verify/verify",
+    "pages/change_password/change_password",
+    "pages/school_list/school_list",
+    "pages/major_ranking/major_ranking",
+    "pages/school_ranking/school_ranking",
+    "pages/score_line/score_line",
+    "pages/table_for_score_and_ranking/table_for_score_and_ranking",
+    "pages/major_recommendation/major_recommendation",
+    "pages/popular_major/popular_major",
+    "pages/voluntary_input/voluntary_input",
+    "pages/voluntary_output/voluntary_output",
+    "pages/search_single_school/search_single_school",
+    "pages/search_single_school_and_major/search_single_school_and_major",
+    "pages/user_index/user_index",
+    "pages/user_feedback/user_feedback",
+    "pages/reply/reply",
+    "pages/user_change_password/user_change_password",
+    "pages/class_ranking/class_ranking",
+    "pages/insert_school_list/insert_school_list",
+    "pages/admin_add_school_list/admin_add_school_list",
+    "pages/admin_user_management/admin_user_management",
+    "pages/admin_review_feedback/admin_review_feedback",
+    "pages/admin_reply_feedback/admin_reply_feedback",
+    "pages/user_view_reply/user_view_reply",
+    "pages/statistics/statistics",
+    "pages/admin_add_major_ranking/admin_add_major_ranking",
+    "pages/detail_major_ranking/detail_major_ranking",
+    "pages/insert_major_ranking/insert_major_ranking",
+    "pages/admin_view_score_line/admin_view_score_line",
+    "pages/admin_add_score_line/admin_add_score_line"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "高考信息查询系统",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#f5f5f9"
+  },
+
+  "tabBar": {
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/images/icon/home.png",
+        "selectedIconPath": "/images/icon/check.png"
+      },
+      {
+        "pagePath": "pages/user_index/user_index",
+        "text": "用户",
+        "iconPath": "/images/icon/user.png",
+        "selectedIconPath": "/images/icon/check.png"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black"
+  },
+  
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

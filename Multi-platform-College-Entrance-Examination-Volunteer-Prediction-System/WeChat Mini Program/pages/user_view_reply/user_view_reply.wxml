@@ -1,0 +1,45 @@
+<!--pages/user_view_reply/user_view_reply.wxml-->
+<view class="title">
+  管理员通知信息
+</view>
+
+<view class="section">
+  <view>
+  未读信息：
+</view>
+<view style="height: 10px;"></view>
+<view wx:for = "{{output_list}}">
+  <view class = "itemRoot" >
+    <view class="output_item_top">
+      发送方：{{item.reply_sender_phone_number}}
+    </view>
+    <view class="output_item_middle">
+      接收方：{{item.reply_receiver_phone_number}}
+    </view>
+    <view class="output_item_buttom">
+      内容：{{item.paragraph}}
+    </view>
+    <button bindtap="read" data-id="{{item._id}}">标为已读</button>
+  </view>
+</view>
+<view style="height: 10px;"></view>
+<view style="height: 10px;"></view>
+<view>
+  已读信息：
+</view>
+<view style="height: 10px;"></view>
+<view wx:for = "{{output_list1}}">
+  <view class = "itemRoot" >
+    <view class="output_item_top">
+      发送方：{{item.reply_sender_phone_number}}
+    </view>
+    <view class="output_item_middle">
+      接收方：{{item.reply_receiver_phone_number}}
+    </view>
+    <view class="output_item_buttom">
+      内容：{{item.paragraph}}
+    </view>
+  </view>
+</view>
+</view>
+

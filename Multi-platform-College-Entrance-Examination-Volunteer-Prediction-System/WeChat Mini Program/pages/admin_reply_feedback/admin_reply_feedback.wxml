@@ -1,0 +1,20 @@
+<!--pages/admin_reply_feedback/admin_reply_feedback.wxml-->
+<view class="title">
+  用户反馈回复
+</view>
+
+<view class="section">
+  <view>
+  请输入回复：
+</view>
+  <view style="background-color: white; display: flex; justify-content: center;  border-radius: 20px;">
+  <view style="height: 3px;"> 
+  </view>
+  <textarea  type="text"  bindinput="reply_input" style="background-color: white; display: flex; " />
+</view>
+  <button class="btn" bindtap="upload">提交</button>
+</view>
+
+
+
+

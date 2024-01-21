@@ -1,0 +1,33 @@
+<!--pages/detail_major_ranking/detail_major_ranking.wxml-->
+<view style="height: 30pxs;">
+  
+</view>
+
+<view style="height: 10px;"></view>
+<view wx:for = "{{output_list}}">
+  <view class = "itemRoot">
+    <view class="output_item_top">
+      院校名：{{item.school_name}}
+    </view>
+    <view class="output_item_middle">
+      专业名：{{item.major}}
+    </view>
+    <view class="output_item_middle">
+      专业类别：{{item.major_class}}
+    </view>
+    <view class="output_item_middle">
+      专业排名：{{item.ruanke_ranking}}
+    </view>
+    <view class="output_item_middle">
+      专业排名前百分比：{{item.percentage_ranking}}
+    </view>
+    <view class="output_item_middle">
+      学科评估等级：{{item.evaluation_level}}
+    </view>
+    <view class="output_item_buttom">
+      是否为双一流专业：{{item.is_distinction}}
+    </view>
+
+  </view>
+
+</view>

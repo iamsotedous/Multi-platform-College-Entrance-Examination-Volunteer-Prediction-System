@@ -1,0 +1,52 @@
+<!--pages/login/login.wxml-->
+<view class="login-container">
+
+<view class="welcome">
+  欢迎使用高考信息查询系统！
+</view>
+
+<view class="section-container">
+  <view class="common-text">手机号</view>
+  <input class="common-input" maxlength="11"  bindinput="add_login_phone_number" placeholder="请输入11位手机号" />
+</view>
+
+<view class="section-container">
+  <view class="common-text" >密码</view>
+  <input class="common-input"  bindinput="add_login_password" placeholder="请输入密码" />
+</view>
+
+<view class="btn-area1">
+      <button class="btn" type="default" style="background:#0164a6; color:white" bindtap="login">登录</button>
+</view>
+
+<view class="btn-area2">
+  <button class="btn" type="primary" color: bindtap="jump_to_logon" plain>注册</button>
+</view>
+
+<view class="btn-area3">
+      <button class="btn" type="default" plain="false" bindtap="jump_to_change_password">忘记密码？</button>
+</view>
+
+<view class="explain">
+  开发者联系方式：
+</view>
+
+<view class="explain1" >
+  
+  <text style="user-select:all">chenyuxuan_npu@mail.nwpu.edu.cn</text>
+<view style="height: 30px;">
+  
+</view>
+
+<view>
+  技术支持：西北工业大学
+</view>
+</view>
+
+<!-- <view style="height: 30px;">
+  
+</view> -->
+
+</view>
+
+

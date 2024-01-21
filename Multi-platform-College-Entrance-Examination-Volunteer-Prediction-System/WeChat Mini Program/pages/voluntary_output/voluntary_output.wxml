@@ -1,0 +1,108 @@
+<!--pages/voluntary_output/voluntary_output.wxml-->
+<view style="height: 20px;">
+  
+</view>
+<view class="title">
+    查看已填报志愿
+</view>
+<view style="height: 20px;">
+  
+</view>
+<view>
+  <view class = "itemRoot" >
+    <view class="output_item_top">
+      高校名称：{{school_name_1_output}}
+    </view>
+    <view class="output_item_middle">
+      专业名称：{{major_name_1_output}}
+    </view>
+    <view class="output_item_middle">
+      专业热度：{{time_1}}
+    </view>
+    <view class="output_item_buttom">
+      当前排名：{{rank_1}}
+    </view>
+  </view>
+</view>
+
+<view class="empty"></view>
+
+<view>
+  <view class = "itemRoot" >
+    <view class="output_item_top">
+      高校名称：{{school_name_2_output}}
+    </view>
+    <view class="output_item_middle">
+      专业名称：{{major_name_2_output}}
+    </view>
+    <view class="output_item_middle">
+      专业热度：{{time_2}}
+    </view>
+    <view class="output_item_buttom">
+      当前排名：{{rank_2}}
+    </view>
+  </view>
+</view>
+
+<view class="empty"></view>
+
+<view>
+  <view class = "itemRoot" >
+    <view class="output_item_top">
+      高校名称：{{school_name_3_output}}
+    </view>
+    <view class="output_item_middle">
+      专业名称：{{major_name_3_output}}
+    </view>
+    <view class="output_item_middle">
+      专业热度：{{time_3}}
+    </view>
+    <view class="output_item_buttom">
+      当前排名：{{rank_3}}
+    </view>
+  </view>
+</view>
+
+<view class="empty"></view>
+
+<view>
+  <view class = "itemRoot" >
+    <view class="output_item_top">
+      高校名称：{{school_name_4_output}}
+    </view>
+    <view class="output_item_middle">
+      专业名称：{{major_name_4_output}}
+    </view>
+    <view class="output_item_middle">
+      专业热度：{{time_4}}
+    </view>
+    <view class="output_item_buttom">
+      当前排名：{{rank_4}}
+    </view>
+  </view>
+</view>
+
+<view class="empty"></view>
+
+<view>
+  <view class = "itemRoot" >
+    <view class="output_item_top">
+      高校名称：{{school_name_5_output}}
+    </view>
+    <view class="output_item_middle">
+      专业名称：{{major_name_5_output}}
+    </view>
+    <view class="output_item_middle">
+      专业热度：{{time_5}}
+    </view>
+    <view class="output_item_buttom">
+      当前排名：{{rank_5}}
+    </view>
+  </view>
+</view>
+
+<button class="btn" bindtap="back_to_index">返回功能主页</button>
+
+<view style="height: 20px;"></view>
+<view style="height: 20px;"></view>
+<view style="height: 20px;"></view>

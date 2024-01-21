@@ -1,0 +1,58 @@
+<!--pages/admin_add_school_list/admin_add_school_list.wxml-->
+<view class="section">
+  <view>
+    校名：
+  </view>
+  <input class="picker" type="text" placeholder="示例：西北工业大学" bindinput="school_name_input"/>
+  <view style="height: 10px;"></view>
+  <view>
+    学校所属地区：
+  </view>
+  <view class="section">
+  <picker bindchange="bindPickerChange_location" value="{{index_for_location}}" range="{{array_location}}">
+    <view class="picker">
+      当前选择：{{array_location[index_for_location]}}
+    </view>
+  </picker>
+  </view>
+  <view style="height: 10px;"></view>
+  <view>
+    学校所属类别：
+  </view>
+  <view class="section">
+    <picker bindchange="bindPickerChange_school" value="{{index_for_school}}" range="{{array_school}}">
+      <view class="picker">
+        当前选择：{{array_school[index_for_school]}}
+      </view>
+    </picker>
+  </view>
+  <view style="height: 10px;"></view>
+  <view>
+    学校级别：
+  </view>
+  <view class="section">
+    <picker bindchange="bindPickerChange" value="{{index_for_array}}" range="{{array}}">
+      <view class="picker">
+        当前选择：{{array[index_for_array]}}
+      </view>
+    </picker>
+  </view>
+</view>
+
+  <!-- <view>
+    学校是否211：
+  </view>
+  <input type="text" placeholder="示例：211" bindinput="is_211_input"/>
+  <view>
+    学校是否985：
+  </view>
+  <input type="text" placeholder="示例：985" bindinput="is_985_input"/>
+  <view>
+    学校是否双一流：
+  </view>
+  <input type="text" placeholder="示例：双一流" bindinput="is_double_first_class_input"/>
+</view> -->
+
+<button class="btn" bindtap="insert">提交</button>
+
+

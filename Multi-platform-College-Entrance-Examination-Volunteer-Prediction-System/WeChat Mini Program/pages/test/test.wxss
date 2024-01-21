@@ -1,0 +1,133 @@
+/* pages/test/test.wxss */
+/* 顶部搜索框样式 */
+.scrollView {
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap;    
+  justify-content: space-between; 
+}
+.content {
+  width: 33vw;	
+  height: 33vw;
+  box-sizing: border-box;
+  background-color: #add8e6;
+  color: whitesmoke;
+  display: flex;		
+  flex-direction: column;
+  align-items: center;     /* 子 view 垂直居中 */
+  justify-content: center; 
+  margin-top: 1px;
+}
+
+#searchOuterView{
+  /*设置内边距*/
+  padding:15rpx;
+}
+#searchInnerView{
+  /*内容居中*/
+  text-align: center;
+  /* 设置宽高*/
+  width: 720rpx;
+  height:58rpx;
+  /*设置背景颜色*/
+  background:#eeeeee;
+  /*设置边框*/
+  border:2rpx solid #ececee;
+  /*设置边框圆角*/
+  border-radius: 8rpx;
+  /*设置行高*/
+  line-height: 52rpx;
+  /*设置边框包含在宽高之内*/
+  box-sizing: border-box;
+}
+#searchInnerView > image{
+  /* 给图片设置宽和高 */
+  width:36rpx;
+  height:36rpx;
+  /*设置垂直对齐方式*/
+  vertical-align: middle;
+}
+#searchInnerView > image{
+  /* 给文字设置大小 */
+  font-size:24rpx;
+  /* 给文字设置颜色 */
+  color: #b2b2b2;
+}
+/* page {
+  padding-top: 54rpx;
+  background-color: #f6f6f6;
+  padding-bottom: 60rpx;
+} */
+
+.picker{
+  padding: 13px;
+  background-color: #ffffff;
+}
+
+.container1 view{
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.container1{
+  display: flex;
+  justify-content: space-around;
+}
+
+.container1 view:nth-child(1){
+background-color: aquamarine;
+}
+
+.container1 view:nth-child(2){
+background-color:aqua ;
+}
+
+.container1 view:nth-child(3){
+background-color:wheat;
+}
+
+.container2 view{
+  width: 150px;
+  height: 1000px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.container2{
+  border:1px solid red;
+  width: 99.5%;
+  height: 150px;
+}
+
+.swiper-container{
+  height: 150px;
+}
+
+.item1,.item2,.item3{
+  height: 100%;
+  line-height: 150px;
+  text-align: center;
+}
+
+.item1{
+  background-color: red;
+}
+
+.item2{
+  background-color: rebeccapurple;
+}
+
+.item3{
+  background-color: oldlace;
+}
+
+.pic1{
+display: flex;
+justify-content: center;
+}
+
+.empty{
+  height: 50px;
+}

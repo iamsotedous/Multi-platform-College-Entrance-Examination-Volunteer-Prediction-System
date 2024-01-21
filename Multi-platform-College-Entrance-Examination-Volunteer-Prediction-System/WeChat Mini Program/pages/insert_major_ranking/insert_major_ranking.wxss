@@ -1,0 +1,23 @@
+/* pages/insert_major_ranking/insert_major_ranking.wxss */
+.title{
+  text-align: center;
+  margin-top: 25px;
+  font-size: 25px;
+}
+
+.picker{
+  background-color:white;
+  border: 1px;
+  border-color: aquamarine;
+  border-radius: 20px;
+}
+
+.btn{
+  margin-top: 25px;
+}
+
+.section{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+}

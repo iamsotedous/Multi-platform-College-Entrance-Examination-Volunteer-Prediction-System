@@ -1,0 +1,168 @@
+<!--pages/test/test.wxml-->
+
+<view class="pageRoot">
+  <!-- 页面内容超出屏幕时可滑动 -->
+  <scroll-view scroll-y="true">
+    <view class="scrollView">
+      <view class="content" wx:for="{{items}}" wx:key="index" bindtap="{{taps[index]}}">
+        <image src="cloud://test-3g4liwgzdf92b615.7465-test-3g4liwgzdf92b615-1317480899/images/icon/book.png" style="max-width: 60%;height: 80px;"/>
+        <text>{{items[index]}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view id="searchOuterView">
+    <view id="searchInnerView">
+        <text>搜索院校信息</text>
+    </view>
+</view>
+
+
+<view class="container1">
+  <view>
+    1
+  </view>
+
+  <view>
+    2
+  </view>
+
+  <view>
+    3
+  </view>
+</view>
+
+<scroll-view class="container2" scroll-y>
+  <view>
+    1
+  </view>
+
+  <view>
+    2
+  </view>
+</scroll-view>
+
+<swiper class="swiper-container" indicator-dots indicator-color="white" indicator-active-color="black" autoplay="500" circular="true">
+  <swiper-item>
+    <view class="item1">
+      1
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view class="item2">
+      2
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view class="item3">
+      3
+    </view>
+  </swiper-item>
+
+</swiper>
+
+<view>
+  <text selectable>111</text>
+</view>
+
+<view>
+  <text>111</text>
+</view>
+<rich-text nodes="<h1 style='color:red'>标题</h1>"/>
+
+<view>
+  普通按钮
+</view>
+
+<button bindtap="btnhand00">1</button>
+<button type="primary">主色调按钮</button>
+<button type="warn">警告按钮</button>
+
+<button size="mini">1</button>
+<button type="primary" size="mini">小主色调按钮</button>
+<button type="warn" size="mini">小警告按钮</button>
+
+<button plain>1</button>
+<button type="primary" plain>主色调按钮</button>
+<button type="warn" plain>警告按钮</button>
+
+
+<input placeholder="输入分数" bindinput="add_score"/>
+<button bindtap="get_some_data">查询一分一段表</button>
+
+<view class="section">
+  <view class="section__title">选择生源地：</view>
+  <picker bindchange="bindPickerChange_location" value="{{index_for_location}}" range="{{array_location}}">
+    <view class="picker">
+      当前选择：{{array_location[index_for_location]}}
+    </view>
+  </picker>
+</view>
+
+<input placeholder="输入校名" bindinput="add_school"/>
+
+<button bindtap="get_score_line">查询分数线</button>
+
+<view class="empty"></view>
+
+<button bindtap="add_two_numbers">试用云函数</button>
+
+<view class="empty"></view>
+<button bindtap="search_score">试用自己写的云函数</button>
+
+<recycle-view>这里有一个可滚动的长view，以后试试</recycle-view>
+
+
+<button bindtap="test_over100">测试一下一百条以上，别乱按</button>
+
+<view class = "empty">
+  下面是登录功能
+</view>
+
+<input placeholder="输入手机号" bindinput="add_logon_phone_number"/>
+<input placeholder="输入密码" bindinput="add_logon_password"/>
+<input placeholder="输入姓名" bindinput="add_logon_name"/>
+<input placeholder="输入管理员验证码" bindinput="add_logon_verification"/>
+<button bindtap="logon">用户注册</button>
+
+<view class = "empty">
+</view>
+
+<input placeholder="输入手机号" bindinput="add_login_phone_number"/>
+<input placeholder="输入密码" bindinput="add_login_password"/>
+<button bindtap="login">用户登录</button>
+
+<view class = "empty">
+</view>
+
+<input placeholder="输入手机号" bindinput="add_change_phone_number"/>
+<input placeholder="输入姓名" bindinput="add_change_name"/>
+<input placeholder="输入新密码" bindinput="add_change_password"/>
+<button bindtap="change_password">更改密码</button>
+
+<view class = "empty">
+  下面是下载功能
+</view>
+<button bindtap="download_pdf">打开并下载pdf</button>
+
+<view class = "empty">
+  下面是选择表
+</view>
+
+
+<text>地区在上面下拉框选</text>
+
+<view class="section">
+  <view class="section__title">选择文理科：</view>
+  <picker bindchange="bindPickerChange_class" value="{{index_for_class}}" range="{{array_class}}">
+    <view class="picker">
+      当前：{{array_class[index_for_class]}}
+    </view>
+  </picker>
+</view>
+
+<input placeholder="输入一分一段表对应分数" bindinput="add_score_for_ranking"/>
+<button bindtap="search_table_of_ranking">点击这里输出对应的表名字先</button>

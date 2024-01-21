@@ -1,0 +1,41 @@
+<!--pages/search_single_school_and_major/search_single_school_and_major.wxml-->
+<view style="height: 30px;">
+  
+</view>
+<view wx:for = "{{output_list}}">
+  <view class = "itemRoot" >
+    <view class="output_item_top">
+      高校名：{{item.school_name}}
+    </view>
+    <view class="output_item_middle">
+      专业名：{{item.major}}
+    </view>
+    <view class="output_item_middle">
+      招生地点：{{item.location}}
+    </view>
+    <view class="output_item_middle">
+      文理要求：{{item.sci_or_art}}
+    </view>
+    <view class="output_item_middle">
+      招生批次：{{item.batch_num}}
+    </view>
+    <view class="output_item_middle">
+      招生类别：{{item.kind}}
+    </view>
+    <view class="output_item_middle">
+      录取最高分：{{item.highest_score}}
+    </view>
+    <view class="output_item_middle">
+      录取分数线：{{item.lowest_score}}
+    </view>
+    <view class="output_item_middle">
+      录取最低位次：{{item.lowest_ranking}}
+    </view>
+    <view class="output_item_middle">
+      本科线：{{item.minimum_score}}
+    </view>
+    <view class="output_item_buttom">
+      选课需求：{{item.requirement}}
+    </view>
+  </view>
+</view>

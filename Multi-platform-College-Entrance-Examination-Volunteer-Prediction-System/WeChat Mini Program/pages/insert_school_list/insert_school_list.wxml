@@ -1,0 +1,53 @@
+<!--pages/insert_school_list/insert_school_list.wxml-->
+
+<view class="title">
+  高校列表管理
+</view>
+
+<view class="section">
+  <view class="section__title">选择院校类型：</view>
+  <picker bindchange="bindPickerChange_school" value="{{index_for_school}}" range="{{array_school}}">
+    <view class="picker">
+      当前选择：{{array_school[index_for_school]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择院校级别：</view>
+  <picker bindchange="bindPickerChange_class" value="{{index_for_class}}" range="{{array_class}}">
+    <view class="picker">
+      当前选择：{{array_class[index_for_class]}}
+    </view>
+  </picker>
+</view>
+
+<view style="height: 30px;"></view>
+
+<button bindtap="search_school_list">展示高校列表</button>
+
+<view style="height: 15px;"></view>
+
+<button bindtap="jump_admin_add_school_list">新增学校数据</button>
+
+<view style="height: 20px;"></view>
+
+<view wx:for = "{{output_list}}">
+  <view class = "itemRoot" >
+    <view class="output_item_top" bindtap="jump" data-school="{{item.school_name}}">
+      校名：{{item.school_name}}
+    </view>
+    <view class="output_item_buttom" bindtap="jump" data-school="{{item.school_name}}">
+      办学地点：{{item.province}}
+    </view>
+    <!-- <view>
+      {{item._id}}
+    </view> -->
+    <button bindtap="delete_school_list" data-id="{{item._id}}">删除该院校</button>
+  </view>
+  
+</view>
+
+<view style="height: 60px;"></view>
+
+

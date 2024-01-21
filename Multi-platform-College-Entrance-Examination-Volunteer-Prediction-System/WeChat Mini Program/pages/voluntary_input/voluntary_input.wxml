@@ -1,0 +1,131 @@
+<!--pages/voluntary_input/voluntary_input.wxml-->
+<view style="height: 30px;"></view>
+
+<view class="title">
+  模拟志愿填报
+</view>
+
+<view class="section">
+  <view>
+  请输入您的高考分数：
+</view>
+<input class="picker" placeholder="高考分数" bindinput="add_score"/>
+</view>
+
+
+
+<view class="section">
+  <view class="section__title">选择生源地：</view>
+  <picker bindchange="bindPickerChange_location" value="{{index_for_location}}" range="{{array_location}}">
+    <view class="picker">
+      当前选择：{{array_location[index_for_location]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择您的科目类别：</view>
+  <picker bindchange="bindPickerChange_class" value="{{index_for_class}}" range="{{array_class}}">
+    <view class="picker">
+      当前：{{array_class[index_for_class]}}
+    </view>
+  </picker>
+</view>
+
+<view class = "empty"></view>
+
+<view class="section">
+  <view>
+  请输入您的一志愿院校
+</view>
+<input class="picker"  placeholder="一志愿院校全称" bindinput="add_school1"/>
+</view>
+
+<view class="section">
+  <view class="section__title">选择专业类别：</view>
+  <picker bindchange="bindPickerChange_class1" value="{{index_for_class1}}" range="{{array_class1}}">
+    <view class="picker">
+      当前：{{array_class1[index_for_class1]}}
+    </view>
+  </picker>
+</view>
+
+<view class = "empty"></view>
+
+<view class="section">
+  <view>
+  请输入您的二志愿院校
+</view>
+<input class="picker"  placeholder="二志愿院校全称" bindinput="add_school2"/>
+</view>
+
+<view class="section">
+  <view class="section__title">选择专业类别：</view>
+  <picker bindchange="bindPickerChange_class2" value="{{index_for_class2}}" range="{{array_class2}}">
+    <view class="picker">
+      当前：{{array_class2[index_for_class2]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class = "empty"></view>
+<view>
+  请输入您的三志愿院校
+</view>
+<input class="picker"  placeholder="三志愿院校全称" bindinput="add_school3"/>
+</view>
+
+<view class="section">
+  <view class="section__title">选择专业类别：</view>
+  <picker bindchange="bindPickerChange_class3" value="{{index_for_class3}}" range="{{array_class3}}">
+    <view class="picker">
+      当前：{{array_class3[index_for_class3]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class = "empty"></view>
+<view>
+  请输入您的四志愿院校
+</view>
+<input class="picker"  placeholder="四志愿院校全称" bindinput="add_school4"/>
+</view>
+
+<view class="section">
+  <view class="section__title">选择专业类别：</view>
+  <picker bindchange="bindPickerChange_class4" value="{{index_for_class4}}" range="{{array_class4}}">
+    <view class="picker">
+      当前：{{array_class4[index_for_class4]}}
+    </view>
+  </picker>
+</view>
+
+
+<view class = "empty"></view>
+
+<view class="section">
+  <view>
+  请输入您的五志愿院校
+</view>
+<input class="picker"  placeholder="五志愿院校全称" bindinput="add_school5"/>
+</view>
+
+
+
+<view class="section">
+  <view class="section__title">选择专业类别：</view>
+  <picker bindchange="bindPickerChange_class5" value="{{index_for_class5}}" range="{{array_class5}}">
+    <view class="picker">
+      当前：{{array_class5[index_for_class5]}}
+    </view>
+  </picker>
+</view>
+
+<view class = "empty"></view>
+<button bindtap="submit">点击提交</button>
+
+<view class = "empty"></view>
+<view class = "empty"></view>
+<view class = "empty"></view>

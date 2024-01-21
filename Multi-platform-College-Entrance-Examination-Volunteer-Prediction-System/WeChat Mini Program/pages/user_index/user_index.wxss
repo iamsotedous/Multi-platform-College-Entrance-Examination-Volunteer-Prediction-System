@@ -1,0 +1,78 @@
+/* pages/user_index/user_index.wxss */
+.empty{
+  height: 20px;
+}
+
+.container1 view{
+  width: 375rpx;
+  height: 120px;
+  text-align: center;
+  line-height: 100px;
+
+}
+
+.container1{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+
+.title{
+  font-size: 40rpx;
+  font: outline;
+  text-align: center;
+  margin-bottom: 40rpx;
+  margin-top: 50rpx;
+}
+
+.list0{
+  background-color: white;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  border-bottom-left-radius: 20px ;
+  border-bottom-right-radius: 20px ;
+  border-top-left-radius: 20px ;
+  border-top-right-radius: 20px ;
+
+}
+
+.list1{
+  font-size : 30rpx;
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+  height: 20px;
+}
+
+.top_list{
+  font-size: 34rpx;
+  padding-top: 30rpx;
+  margin-left: 45rpx;
+}
+
+.pic{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0%;
+  
+}
+
+.scrollView {
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap;    
+  justify-content: space-between; 
+}
+.content {
+  width: 33vw;	
+  height: 33vw;
+  box-sizing: border-box;
+  background-color: white;
+  color: black;
+  display: flex;		
+  flex-direction: column;
+  align-items: center;     /* 子 view 垂直居中 */
+  justify-content: center; 
+  margin-top: 1px;
+}

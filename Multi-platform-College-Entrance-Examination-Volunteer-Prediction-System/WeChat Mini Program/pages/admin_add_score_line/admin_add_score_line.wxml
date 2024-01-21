@@ -1,0 +1,68 @@
+<!--pages/admin_add_score_line/admin_add_score_line.wxml-->
+<view style="height: 20px;">
+  
+</view>
+
+<view class="section">
+<view style="height: 10px;"></view>
+  <view>
+    请输入高校名称
+  </view>
+  <input class="picker" type="text" placeholder="示例：西北工业大学" bindinput="add_school_name"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入招生地区
+  </view>
+  <input class="picker"  type="text" placeholder="示例：广东" bindinput="add_location"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入专业名称
+  </view>
+  <input class="picker"  type="text" placeholder="示例：人工智能" bindinput="add_major"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入专业类别
+  </view>
+  <input class="picker"  type="text" placeholder="示例：普通类" bindinput="add_kind"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入招生批次
+  </view>
+  <input class="picker"  type="text" placeholder="示例：本科批" bindinput="add_batch_num"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入专业最高分
+  </view>
+  <input class="picker"  type="text" placeholder="示例：600" bindinput="add_highest_score"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入专业分数线
+  </view>
+  <input class="picker"  type="text" placeholder="示例：580" bindinput="add_lowest_score"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入专业最低排名
+  </view>
+  <input class="picker"  type="text" placeholder="示例：10000" bindinput="add_lowest_ranking"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入本科线
+  </view>
+  <input class="picker"  type="text" placeholder="示例：500" bindinput="add_minimun_score"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入文理科
+  </view>
+  <input class="picker"  type="text" placeholder="示例：理科" bindinput="add_sci_or_art"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入选科要求
+  </view>
+  <input class="picker"  type="text" placeholder="示例：无" bindinput="add_requirement"/>
+  <view style="height: 10px;"></view>
+</view>
+
+
+<button class="btn" bindtap="insert">提交</button>
+<view style="height: 40px;"></view>
+

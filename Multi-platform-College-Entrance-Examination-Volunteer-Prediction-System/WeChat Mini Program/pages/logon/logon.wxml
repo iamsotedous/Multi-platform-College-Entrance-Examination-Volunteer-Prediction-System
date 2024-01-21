@@ -1,0 +1,46 @@
+<!--pages/login/login.wxml-->
+<view class="logon-container">
+
+<view class="instruction">
+  请输入注册信息：
+</view>
+
+<view class="section-container">
+  <view class="common-text">手机号</view>
+  <input class="common-input" maxlength="11" type="number"  bindinput="add_logon_phone_number" placeholder="请输入11位手机号" />
+</view>
+
+<view class="section-container">
+  <view class="common-text" >密码</view>
+  <input class="common-input"  bindinput="add_logon_password" placeholder="请输入密码" />
+</view>
+
+<view class="section-container">
+  <view class="common-text" >姓名</view>
+  <input class="common-input"  bindinput="add_logon_name" placeholder="请输入您的姓名拼音" />
+</view>
+
+<view class="section-container">
+  <view class="common-text" >管理员密钥</view>
+  <input class="common-input" password type="text"  bindinput="add_logon_verification" placeholder="请输入您的管理员密钥（可为空）" />
+</view>
+
+
+<!-- <view class="button_for_explain">
+    <button class="btn1"  size="mini">填写提示</button>
+</view> -->
+<view style="height: 20px;">
+  
+</view>
+
+
+<view class="btn-area1">
+      <button class="btn" type="default" style="background:#0164a6; color:white" bindtap="logon">注册</button>
+</view>
+
+<view class="explain" hidden="{{instruction_hidden}}">
+  注册提示：单一手机号仅可注册一个账号，若已注册请登录或重置密码。
+</view>
+
+
+</view>

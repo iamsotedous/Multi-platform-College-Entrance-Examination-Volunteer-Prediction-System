@@ -1,0 +1,68 @@
+<!--pages/statistics/statistics.wxml-->
+<view class="title">
+  数据统计
+</view>
+<view style="height: 15px;"></view>
+<view style="height: 15px;"></view>
+
+<view class="itemRoot">
+  <view class="output_item_top">
+    以下为用户统计：
+  </view>
+  <view style="height: 15px;"></view>
+  <view class="output_item_middle">
+    用户总量：{{total_user}}
+  </view>
+  <view class="output_item_middle">
+    管理员用户：{{admin_user}}
+  </view>
+  <view class="output_item_middle">
+    普通用户：{{none_admin_user}}
+  </view>
+  <view class="output_item_middle">
+    已注销用户：{{deleted_user}}
+  </view>
+  <view class="output_item_middle">
+    用户反馈数：{{feedbacks}}
+  </view>
+  <view class="output_item_buttom">
+    管理员已回复数：{{replies}}
+  </view>
+
+</view>
+
+<view class="itemRoot">
+  <view class="output_item_top">
+     以下为填报相关信息统计： 
+  </view>
+  <view style="height: 15px;"></view>
+  <view class="output_item_middle">
+      已填报用户数：{{submitted_user}}
+  </view>
+  <view class="output_item_middle">
+      填报学校数：{{submitted_school}}
+  </view>
+  <view class="output_item_buttom">
+      填报专业数：{{submitted_major}}
+  </view>
+</view>
+
+<view class="itemRoot">
+  <view class="output_item_top">
+      以下为系统数据统计：
+  </view>
+  <view style="height: 15px;"></view>
+  <view class="output_item_middle">
+      学校记录数：{{school}}
+  </view>
+  <view class="output_item_middle">
+      专业记录数：{{major}}
+  </view>
+  <view class="output_item_middle">
+      分数线记录数：{{score_line}}
+  </view>
+  <view class="output_item_buttom">
+      一分一段表数：{{table}}
+  </view>
+</view>
+<view style="height: 50px;"></view>

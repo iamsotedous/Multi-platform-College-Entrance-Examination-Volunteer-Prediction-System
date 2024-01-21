@@ -1,0 +1,47 @@
+<!--pages/admin_add_major_ranking/admin_add_major_ranking.wxml-->
+<view class="title">
+  学校排名信息管理
+</view>
+
+<view class="section">
+  <button bindtap="jump_to_insert_major_ranking">增加学校排名信息</button>
+  <view style="height: 10px;"></view>
+<input class="picker" type="text" placeholder="请输入学校名称，例如：西北工业大学" bindinput="add_school"/>
+<view style="height: 10px;"></view>
+<button bindtap="search_school">查询数据库中对应学校</button>
+</view>
+
+<view style="height: 20px;"></view>
+
+
+<view wx:for = "{{output_list1}}">
+  <view class = "itemRoot">
+  <view  bindtap="jump_detail_major_ranking" data-detail="{{item.school_name}}" data-major="{{item.major}}">
+        <view class="output_item_top">
+      院校名：{{item.school_name}}
+    </view>
+    <view class="output_item_middle">
+      专业名：{{item.major}}
+    </view>
+    <view class="output_item_buttom">
+      专业类别：{{item.major_class}}
+    </view>
+    <!-- <view>
+      专业排名：{{item.ruanke_ranking}}
+    </view>
+    <view>
+      专业排名前百分比：{{item.percentage_ranking}}
+    </view>
+    <view>
+      学科评估等级：{{item.evaluation_level}}
+    </view>
+    <view>
+      是否为双一流专业：{{item.is_distinction}}
+    </view> -->
+  </view>
+    <button bindtap="delete_current_target" data-id="{{item._id}}">删除该项</button>
+  </view>
+
+</view>
+
+<view style="height: 60px;"></view>

@@ -1,0 +1,25 @@
+<!--pages/user_feedback/user_feedback.wxml-->
+<view class="title">
+  用户反馈  
+</view>
+
+<view class="section"> 
+  <view>
+  请输入您的反馈意见：
+</view>
+<view style="background-color: white; display: flex; justify-content: center;  border-radius: 20px;">
+  <view style="height: 6px;">
+  </view>
+  <textarea  type="text"  bindinput="feedback_input" style="background-color: white; display: flex; "/>
+</view>
+
+<view style="height: 20px;"></view>
+<view>
+  请留下您的联系方式：
+</view>
+<input class="picker" type="text" placeholder="联系方式" bindinput="connection_input"/>
+</view>
+
+
+
+<button class="btn" bindtap="submit">提交</button>

@@ -1,0 +1,46 @@
+<!--pages/insert_major_ranking/insert_major_ranking.wxml-->
+<view style="height: 20px;">
+  
+</view>
+
+<view class="section">
+  <view>
+    请输入校名：
+  </view>
+  <input class="picker"  type="text" bindinput="add_school" placeholder="示例：西北工业大学"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入专业名：
+  </view>
+  <input class="picker"  type="text" bindinput="add_major" placeholder="示例：人工智能"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入专业类别：
+  </view>
+  <input class="picker"  type="text" bindinput="add_class1" placeholder="示例：电子信息类"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入是否双一流学科填是或否：
+  </view>
+  <input class="picker"  type="text" bindinput="add_is_distinction" placeholder="示例：是"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入学科评估等级：
+  </view>
+  <input class="picker" type="text" bindinput="add_evaluation" placeholder="示例：A"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入软科排名：
+  </view>
+  <input class="picker"  type="text" bindinput="add_ruanke_ranking" placeholder="示例：1"/>
+  <view style="height: 10px;"></view>
+  <view>
+    请输入排名百分比：
+  </view>
+  <input class="picker"  type="text" bindinput="add_percentage" placeholder="示例：1%"/>
+  <view style="height: 10px;"></view>
+
+<button class="btn" bindtap="upload">提交</button>
+</view>
+
+

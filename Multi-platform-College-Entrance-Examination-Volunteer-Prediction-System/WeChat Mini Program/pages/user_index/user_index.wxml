@@ -1,0 +1,97 @@
+<!--pages/user_index/user_index.wxml-->
+
+<view class="title">
+  欢迎使用，{{user_name}}同学！
+</view>
+
+<!-- <view class="list0">
+  <view class="top_list">用户功能：</view>
+  <view class="container1" style="flex-direction:row;">
+    <view bindtap="jump_to_input" class="list1">
+      填报志愿   
+    </view>
+    <view bindtap="jump_to_output" class="list1">
+      查看志愿
+    </view>
+    <view bindtap="feedback" class="list1">
+      用户反馈
+    </view>
+  </view>
+  <view class="container1" style="flex-direction:row;">
+    <view bindtap="jump_view_reply" class="list1">
+      查看通知
+    </view>  
+    <view bindtap="jump_user_change_password" class="list1">
+      修改密码
+    </view>
+    <view bindtap="delete_account" class="list1">
+      用户注销
+    </view>
+  </view>
+</view>
+
+<view class="empty"></view>
+
+
+<view hidden="{{is_hidden}}" class="list0">
+  <view class="top_list">管理员功能：</view>
+  <view class="container1" style="flex-direction:row;">
+    <view bindtap="jump_to_user_management" class="list1" style="flex-direction:column;">
+      管理用户列表
+    </view>
+    <view bindtap="jump_to_review_feedback" class="list1">
+      查看用户反馈
+    </view>
+    <view bindtap="jump_to_statistics" class="list1">
+      数据统计
+    </view>
+  </view>
+  <view class="container1" style="flex-direction:row;">
+    <view bindtap="jump_insert_school_list" class="list1">
+      更新学校列表
+    </view>  
+    <view bindtap="jump_to_add_major_ranking" class="list1">
+      更新专业信息
+    </view>
+    <view bindtap="jump_score_line" class="list1">
+      插入分数线
+    </view>
+  </view>
+</view> -->
+<view style="margin-top: 20px;background-color: white; justify-content: center; display: flex;height: 50px; align-items: center;background-color: white;border-top-left-radius: 15px;border-top-right-radius:15px ;">
+  <text style="justify-content: center; font-size: larger;background-color: white;color: black;">用户功能</text>
+</view>
+<view class="pageRoot">
+  <!-- 页面内容超出屏幕时可滑动 -->
+  <scroll-view scroll-y="true">
+    <view class="scrollView">
+      <view class="content" wx:for="{{items}}" wx:key="index" bindtap="{{taps[index]}}">
+        <image src="{{online_icons[index]}}"  style="max-width: 37%;height: 43px;margin-bottom: 10px;"/>
+        <text>{{items[index]}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view hidden="{{is_hidden}}">
+  <view style="margin-top: 40px;background-color: white; justify-content: center; display: flex;height: 50px; align-items: center;background-color: white;border-top-left-radius: 15px;border-top-right-radius:15px ;">
+  <text style="justify-content: center; font-size: larger;background-color: white;color: black;" hidden="{{is_hidden}}">管理员功能</text>
+</view>
+<view class="pageRoot" hidden="{{is_hidden}}">
+  <!-- 页面内容超出屏幕时可滑动 -->
+  <scroll-view scroll-y="true">
+    <view class="scrollView">
+      <view class="content" wx:for="{{items_admin}}" wx:key="index" bindtap="{{taps_admin[index]}}">
+        <image src="{{online_icons_admin[index]}}"  style="max-width: 37%;height: 43px;margin-bottom: 10px;"/>
+        <text>{{items_admin[index]}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+</view>
+
+
+
+<view style="height: 50px;">
+  
+</view>

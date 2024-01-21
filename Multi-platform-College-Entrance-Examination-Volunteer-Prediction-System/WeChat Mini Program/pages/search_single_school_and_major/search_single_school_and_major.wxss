@@ -1,0 +1,38 @@
+/* pages/search_single_school_and_major/search_single_school_and_major.wxss */
+.itemRoot{
+  background-color: #ffffff;
+  border: solid 1px;
+  border-color:beige;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom-left-radius: 10px ;
+  border-bottom-right-radius: 10px ;
+  border-top-left-radius: 10px ;
+  border-top-right-radius: 10px ;
+}
+
+/* class="output_item_top" */
+
+.output_item_top{
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* class="output_item_middle" */
+
+.output_item_middle{
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* class="output_item_buttom" */
+
+.output_item_buttom{
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}

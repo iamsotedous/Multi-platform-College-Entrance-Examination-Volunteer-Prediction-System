@@ -1,0 +1,63 @@
+<!--pages/popular_major/popular_major.wxml-->
+
+
+<view class="title">
+  热门填报排行榜
+</view>
+
+<view class="section">
+  <view class="section__title">选择生源地：</view>
+  <picker bindchange="bindPickerChange_location" value="{{index_for_location}}" range="{{array_location}}">
+    <view class="picker">
+      当前选择：{{array_location[index_for_location]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择文理科：</view>
+  <picker bindchange="bindPickerChange_class" value="{{index_for_class}}" range="{{array_class}}">
+    <view class="picker">
+      当前：{{array_class[index_for_class]}}
+    </view>
+  </picker>
+</view>
+
+<button class="btn" bindtap="search_information">点击查看学校及专业热度排名</button>
+
+<view hidden="{{hidden_for_school}}">
+  校名及热度：
+</view>
+<view wx:for = "{{output_list_school}}">
+  <view class = "itemRoot" bindtap="jump" data-school="{{item.school_name}}">
+    <view class="output_item_top">
+      院校名称：{{item.school_name}}
+    </view>
+    <view class="output_item_buttom">
+      热度：{{item.time}}
+    </view>
+  </view>
+</view>
+
+<view class="empty"></view>
+
+<view hidden="{{hidden_for_major}}">
+  专业及热度：
+</view>
+<view wx:for = "{{output_list_major}}">
+  <view class = "itemRoot" bindtap="jump" data-school="{{item.school_name}}">
+    <view class="output_item_top">
+      院校名称：{{item.school_name}}
+    </view>
+    <view class="output_item_middle">
+      专业类别：{{item.major}}
+    </view>
+    <view class="output_item_buttom">
+      热度：{{item.time}}
+    </view>
+  </view>
+</view>
+
+<view class="empty"></view>
+<view class="empty"></view>
+<view class="empty"></view>

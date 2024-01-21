@@ -1,0 +1,22 @@
+<!--pages/admin_user_management/admin_user_management.wxml-->
+
+<view class="title">
+  用户列表管理
+</view>
+
+<view class="empty"></view>
+
+  <view wx:for = "{{output_list}}">
+    <view class = "itemRoot" >
+      <view class="output_item_top">
+        手机号：{{item.phone_number}}
+      </view>
+      <view class="output_item_buttom">
+        姓名：{{item.name}}
+      </view>
+      <button bindtap="delete_accout" data-id="{{item._id}}" data-phone="{{item.phone_number}}">删除</button>
+
+    </view>
+  </view>
+
+

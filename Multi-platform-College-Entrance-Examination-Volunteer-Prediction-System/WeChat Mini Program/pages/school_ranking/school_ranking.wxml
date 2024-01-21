@@ -1,0 +1,18 @@
+<!--pages/school_ranking/school_ranking.wxml-->
+
+<!-- 查询某学校信息： -->
+<view class="title">
+  高校专业排名查询
+</view>
+<input class="picker" type="text" placeholder="请输入查询的学校名" bindinput="add_school"/>
+
+<button class="btn" bindtap="get_school_info_from_school_name">查询学校信息</button>
+
+<view wx:for = "{{output_list}}">
+  <view class = "itemRoot" >
+    <view class="output_item_middle">
+      {{item.school_info_head}} {{item.school_info_detail}}
+    </view>
+
+  </view>
+</view>

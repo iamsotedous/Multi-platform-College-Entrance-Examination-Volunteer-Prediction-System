@@ -1,0 +1,148 @@
+<!--pages/major_recommendation/major_recommendation.wxml-->
+
+<view class="title">
+  智能推荐
+</view>
+
+<view class="section">
+  <view class="section__title">选择生源地：</view>
+  <picker bindchange="bindPickerChange_location" value="{{index_for_location}}" range="{{array_location}}">
+    <view class="picker">
+      当前选择：{{array_location[index_for_location]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择文理科：</view>
+  <picker bindchange="bindPickerChange_class" value="{{index_for_class}}" range="{{array_class}}">
+    <view class="picker">
+      当前：{{array_class[index_for_class]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view>
+    请输入您的分数：
+  </view>
+  <input class="picker" placeholder="输入一分一段表对应分数" bindinput="add_score_for_ranking"/>
+</view>
+
+
+<view class="btn" class = "empty"></view>
+
+<button bindtap="recommend_school">开始智能推荐</button>
+
+<view class = "empty" hidden="{{hidden_for_school}}"></view>
+
+<view class="section"  hidden="{{hidden_for_school}}">
+  冲刺档院校推荐：
+</view>
+<view wx:for = "{{output_list_school_high}}">
+  <view class = "itemRoot" bindtap="jump" data-school="{{item.school_name}}">
+    <view class="output_item_top">
+      院校名：{{item.school_name}}
+    </view>
+    <view class="output_item_buttom">
+      院校分数线：{{item.score}}
+    </view>
+  </view>
+</view>
+
+<view class = "empty" hidden="{{hidden_for_school}}"></view>
+
+<view class="section"  hidden="{{hidden_for_school}}">
+  主申档院校推荐：
+</view>
+<view wx:for = "{{output_list_school_middle}}">
+  <view class = "itemRoot" bindtap="jump" data-school="{{item.school_name}}">
+    <view class="output_item_top">
+      院校名：{{item.school_name}}
+    </view>
+    <view class="output_item_buttom">
+      院校分数线：{{item.score}}
+    </view>
+  </view>
+</view>
+
+<view class = "empty" hidden="{{hidden_for_school}}"></view>
+
+<view class="section" hidden="{{hidden_for_school}}">
+  保底档院校推荐：
+</view>
+<view wx:for = "{{output_list_school_low}}">
+  <view class = "itemRoot" bindtap="jump" data-school="{{item.school_name}}">
+    <view class="output_item_top">
+      院校名：{{item.school_name}}
+    </view>
+    <view class="output_item_buttom">
+      院校分数线：{{item.score}}
+    </view>
+  </view>
+</view>
+
+<view class = "empty"></view>
+
+<!-- <button bindtap="search_table_of_ranking">点击这里输出推荐专业</button> -->
+
+<view class = "empty" hidden="{{hidden_for_school}}"></view>
+
+<view class="section"  hidden="{{hidden_for_major}}">
+  冲刺档专业推荐：
+</view>
+<view wx:for = "{{output_list_major_high}}">
+  <view class = "itemRoot" bindtap="jump1" data-school="{{item.school_name}}" data-major="{{item.major}}" data-location="{{array_location[index_for_location]}}" data-class="{{array_class[index_for_class]}}">
+    <view class="output_item_top">
+      院校名称：{{item.school_name}}
+    </view>
+    <view class="output_item_middle">
+      院校地点：{{item.location}}
+    </view>
+    <view class="output_item_buttom">
+      专业名称：{{item.major}}
+    </view>
+  </view>
+</view>
+
+<view class = "empty"></view>
+
+<view class="section"  hidden="{{hidden_for_major}}">
+  主申档专业推荐：
+</view>
+<view wx:for = "{{output_list_major_middle}}">
+  <view class = "itemRoot" bindtap="jump1" data-school="{{item.school_name}}" data-major="{{item.major}}" data-location="{{array_location[index_for_location]}}">
+    <view class="output_item_top">
+      院校名称：{{item.school_name}}
+    </view>
+    <view class="output_item_middle">
+      院校地点：{{item.location}}
+    </view>
+    <view class="output_item_buttom">
+      专业名称：{{item.major}}
+    </view>
+  </view>
+</view>
+
+<view class = "empty"></view>
+
+<view class="section"  hidden="{{hidden_for_major}}">
+  保底档专业推荐：
+</view>
+<view wx:for = "{{output_list_major_low}}">
+  <view class = "itemRoot" bindtap="jump1" data-school="{{item.school_name}}" data-major="{{item.major}}" data-location="{{array_location[index_for_location]}}">
+    <view class="output_item_top">
+      院校名称：{{item.school_name}}
+    </view>
+    <view class="output_item_middle">
+      院校地点：{{item.location}}
+    </view>
+    <view class="output_item_buttom">
+      专业名称：{{item.major}}
+    </view>
+  </view>
+</view>
+
+<view class="empty"></view>
+<view class="empty"></view>
+<view class="empty"></view>

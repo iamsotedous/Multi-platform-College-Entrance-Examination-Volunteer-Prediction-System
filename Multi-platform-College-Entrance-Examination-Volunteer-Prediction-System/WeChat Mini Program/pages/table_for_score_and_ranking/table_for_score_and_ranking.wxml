@@ -1,0 +1,67 @@
+<!--pages/table_for_score_and_ranking/table_for_score_and_ranking.wxml-->
+<view class="title">
+  一分一段表查询
+</view>
+
+<view class="section">
+  <view class="section__title">选择生源地：</view>
+  <picker bindchange="bindPickerChange_location" value="{{index_for_location}}" range="{{array_location}}">
+    <view class="picker">
+      当前选择：{{array_location[index_for_location]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择文理科：</view>
+  <picker bindchange="bindPickerChange_class" value="{{index_for_class}}" range="{{array_class}}">
+    <view class="picker">
+      当前：{{array_class[index_for_class]}}
+    </view>
+  </picker>
+</view>
+
+<!-- <input placeholder="输入一分一段表对应分数" bindinput="add_score_for_ranking"/>
+<button bindtap="search_table_of_ranking">点击这里输出对应的表名字以及对应一分一段表信息</button> -->
+<view class="section">
+  <view>
+    请输入您需要查询的分数：
+  </view>
+  <input class="picker" placeholder="分数输入框" bindinput="add_score_for_ranking_scope"/>
+</view>
+
+
+<button class="btn" bindtap="search_table_of_ranking_scope">点击这里输出分段及排名</button>
+
+<view class="empty">
+  
+</view>
+
+<view wx:for = "{{output_list}}">
+  <view class = "itemRoot" >
+    <view class="output_item_top">
+      分数：{{item.score}}
+    </view>
+    <view class="output_item_middle">
+      本段人数：{{item.quantity}}
+    </view>
+    <view class="output_item_buttom">
+      全省排名：{{item.ranking}}
+    </view>
+  </view>
+</view>
+
+<view class="empty"></view>
+
+<view class="section">
+  <view hidden="{{hidden_for_table}}">
+  想看完整的一分一段表？点击这里：
+</view>
+<button class="btn" bindtap="download_pdf" hidden="{{hidden_for_table}}">完整一分一段表</button>
+</view>
+
+<view class="empty"></view>
+<view class="empty"></view>
+<view class="empty"></view>
+
+
